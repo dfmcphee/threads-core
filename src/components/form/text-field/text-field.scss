@@ -1,0 +1,24 @@
+@import '~threads-foundation/foundation';
+
+.text-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-field__label {
+  @include label;
+  margin-bottom: spacing(tight);
+}
+
+.text-field__input {
+  font-size: font-size(input);
+  line-height: 1.2;
+  padding: spacing(tight);
+  border: border();
+  border-radius: border-radius();
+  transition: all animation-duration() animation-timing();
+
+  &:focus {
+    @include focus;
+  }
+}

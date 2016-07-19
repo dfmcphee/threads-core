@@ -1,0 +1,39 @@
+@import '~threads-foundation/foundation';
+
+.list {
+  > li {
+    padding-left: spacing(loose);
+    position: relative;
+
+    + li {
+      margin-top: spacing();
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.list--type-ordered {
+  counter-reset: ordered-counter;
+
+  > li {
+    &::before {
+      content: counter(ordered-counter, decimal) '.';
+      counter-increment: ordered-counter;
+      vertical-align: top;
+    }
+  }
+}
+
+.list--type-unordered {
+  > li {
+    &::before {
+      content: '\2022';
+    }
+  }
+}

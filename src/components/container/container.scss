@@ -1,0 +1,7 @@
+@import '~threads-foundation/foundation';
+
+.container {
+  margin: spacing() auto;
+  @include vertical-rhythm(loose);
+  @include max-width;
+}

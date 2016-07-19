@@ -1,0 +1,45 @@
+@import '~threads-foundation/foundation';
+
+.select {
+  display: flex;
+  flex-direction: column;
+}
+
+.select__label {
+  @include label;
+  margin-bottom: spacing(tight);
+}
+
+.select__wrapper {
+  border: border();
+  border-radius: border-radius();
+  position: relative;
+}
+
+.select__input {
+  font-size: font-size(input);
+  padding: spacing(tight);
+  line-height: 1.2;
+  width: 100%;
+  transition: all animation-duration() animation-timing();
+  border-radius: border-radius();
+
+  &:focus {
+    @include focus;
+  }
+}
+
+.select__icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: spacing(tight);
+  pointer-events: none;
+
+  .icon {
+    width: font-size(input);
+    height: font-size(input);
+    color: color(gray);
+  }
+}

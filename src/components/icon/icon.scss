@@ -1,0 +1,19 @@
+@import '~threads-foundation/foundation';
+
+$default-icon-size: 5rem;
+$large-icon-size: 10rem;
+
+.icon {
+  width: $default-icon-size;
+  height: $default-icon-size;
+  fill: currentColor;
+}
+
+.icon--primary {
+  color: color(primary);
+}
+
+.icon--large {
+  width: $large-icon-size;
+  height: $large-icon-size;
+}

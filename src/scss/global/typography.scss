@@ -1,0 +1,63 @@
+/** Headings **/
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 3.8rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+}
+
+/** Links **/
+a:link,
+a:visited {
+  color: color(primary);
+}
+
+/** Description lists **/
+dt {
+  font-weight: 500;
+
+  + dd {
+    margin-top: spacing();
+  }
+}
+
+dd {
+  margin: 0;
+}
+
+/** Block quotes **/
+blockquote {
+  border-left: 0.5rem solid color(gray);
+  padding-left: spacing();
+  font-size: 2rem;
+  line-height: 3rem;
+}

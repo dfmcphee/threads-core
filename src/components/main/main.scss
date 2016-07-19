@@ -1,0 +1,7 @@
+@import '~threads-foundation/foundation';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  @include vertical-rhythm;
+}

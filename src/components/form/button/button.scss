@@ -1,0 +1,38 @@
+@import '~threads-foundation/foundation';
+
+.button {
+  font-size: font-size(input);
+  font-weight: 500;
+  padding: spacing(tight);
+  border: border(thick);
+  border-radius: border-radius();
+  transition: all animation-duration() animation-timing();
+  border-color: color(ink);
+  color: color(ink);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    @include focus;
+  }
+}
+
+.button__container {
+  display: flex;
+}
+
+.button--type-primary {
+  border-color: color(primary);
+  color: color(primary);
+}
+
+.button--type-danger {
+  border-color: color(danger);
+  color: color(danger);
+}

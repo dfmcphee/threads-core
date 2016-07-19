@@ -1,0 +1,5 @@
+@import '~threads-foundation/foundation';
+
+.section {
+  @include vertical-rhythm(loose);
+}

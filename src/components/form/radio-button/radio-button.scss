@@ -1,0 +1,67 @@
+@import '~threads-foundation/foundation';
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.radio-button__label {
+  @include label;
+  padding-left: spacing(tight);
+  transition: all animation-duration() animation-timing();
+}
+
+.radio-button__target {
+  background-color: color(white);
+  border: border();
+  width: font-size(input) + rem($unit);
+  height: font-size(input) + rem($unit);
+  border-radius: 50%;
+  transition: all animation-duration() animation-timing();
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-button__indicator {
+  transform: scale(0);
+  transition: all animation-duration() animation-timing();
+  pointer-events: none;
+  width: font-size(input) - rem($unit);
+  height: font-size(input) - rem($unit);
+  background: color(primary);
+  border-radius: 50%;
+  display: block;
+}
+
+.radio-button__input {
+  opacity: 0;
+  position: absolute;
+  width: font-size(input) + (spacing() * 2);
+  height: font-size(input) + (spacing() * 2);
+  padding: (spacing() / 2);
+  cursor: pointer;
+
+  &:focus {
+    + .radio-button__target {
+      @include focus;
+    }
+  }
+
+  &:checked {
+    + .radio-button__target {
+      border-color: color(primary);
+
+      .radio-button__indicator {
+        color: color(primary);
+        transform: scale(1);
+      }
+    }
+
+    ~ .radio-button__label {
+      color: color(primary);
+    }
+  }
+}

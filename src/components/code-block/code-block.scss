@@ -1,0 +1,16 @@
+@import '~threads-foundation/foundation';
+
+.code-block {
+  background: color(charcoal);
+  padding: spacing();
+  border-radius: border-radius();
+
+  pre {
+    overflow-x: auto;
+  }
+
+  code {
+    color: color(code);
+    white-space: pre;
+  }
+}
